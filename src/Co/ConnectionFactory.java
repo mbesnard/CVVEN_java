@@ -27,7 +27,12 @@ public class ConnectionFactory {  //Centre le code pour la connection. -> evite 
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
             }
-           con = DriverManager.getConnection("jdbc:postgresql://172.17.121.76/cvvenjava", "test", "test"); //lycéeLocal 
+            /* con = DriverManager.getConnection("jdbc:mysql://localhost/cvven_java?user=root&password="); //maison test local phpmyadmin  */
+            con = DriverManager.getConnection("jdbc:postgresql://192.168.1.20/cvven_java", "maureen", "test"); //maisonLocal postgresql
+
+            /* con = DriverManager.getConnection("jdbc:postgresql://chamilo.rene-descartes.fr/groupe2e?currentSchema=ppe8", "groupe2e", "mdp2e2017"); //bd lycée a mettre sur github */
+           
+            /*con = DriverManager.getConnection("jdbc:postgresql://172.17.121.76/cvvenjava", "test", "test"); //lycéeLocal */
         }
         return con;
     }
